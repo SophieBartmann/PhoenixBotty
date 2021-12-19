@@ -1,4 +1,4 @@
-# Faust-Bot
+# PhoenixBotty
 IRC Bot, derived from Pallaber Bot, Architectonic rework
 
 Designed for non-technical channels
