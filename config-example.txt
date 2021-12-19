@@ -1,0 +1,7 @@
+server: irc.freenode.org
+port: 6667
+nick: FaustBotDev
+channel: #faust-bot
+lang: de-de
+mods: starly,Yana, corvidae
+blacklist: Kicker,
