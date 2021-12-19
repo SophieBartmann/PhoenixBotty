@@ -3,5 +3,5 @@ port: 6667
 nick: PhoenixBottyDev
 channel: #faust-bot
 lang: de-de
-mods: starly,Yana, corvidae
+mods: Yana,MadamePluto
 blacklist: Kicker,
