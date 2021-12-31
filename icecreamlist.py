@@ -27,4 +27,5 @@ icecream = [
     'einen Coppa del Nonno', 'ein veganes Zitroneneis', 'ein grünes Wassereis', 'ein Jolly',
     'ein Twinni', 'ein Tschisi', 'einen Plattfuß', 'ein Supertwister', 'ein Twister',
     'ein Fruchtzwerg-Eis am Stiel','einen Honigmeloneneisbecher', 'ein Honigmeloneneis',
+    'ein Schoko Waffeleis vegan von Valsoia'
 ]
