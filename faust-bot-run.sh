@@ -75,7 +75,7 @@ update() {
   echo "[=== stashing local changes "
   git stash --all
   echo "[=== update the code "
-  git pull origin master
+  git pull origin main
   echo "[=== reapply done local changes "
   git stash pop
   echo "[=== restarting bot instance "
