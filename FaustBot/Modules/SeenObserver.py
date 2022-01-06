@@ -24,15 +24,7 @@ class SeenObserver(PrivMsgObserverPrototype):
         who = data['message'].split(' ')[1]
         user_provider = UserProvider()
         activity = user_provider.get_activity(who)
-        delta = time.gmtime(activity)
-        i18n_server = i18n()
-        td = datetime.timedelta(seconds=activity)
-        print("Blotsch")
-        print(str(activity)+"\n")
-        print(datetime.datetime.fromtimestamp(activity).strftime("%m/%d/%Y, %H:%M:%S"))
-        replacements = {'user': who, 'time': str(datetime.datetime.fromtimestamp(activity).strftime("%d.%m.%Y, %H:%M:%S")),'asker':data['nick']}
-        output = i18n_server.get_text('seen', replacements=replacements,
-                                      lang=self.config.lang)
+        output = data['nick']+": Ich habe "+who+" zuletzt am "+str(datetime.datetime.fromtimestamp(activity).strftime("%d.%m.%Y um %H:%M:%S"))+ ' Uhr gesehen'
         if not self._is_idented_mod(data, connection):
             connection.send_channel(output)
             return
