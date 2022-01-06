@@ -24,9 +24,13 @@ class SeenObserver(PrivMsgObserverPrototype):
         who = data['message'].split(' ')[1]
         user_provider = UserProvider()
         activity = user_provider.get_activity(who)
-        delta = time.time() - activity
+        delta = time.gmtime(activity)
         i18n_server = i18n()
-        replacements = {'user': who, 'time': str(datetime.timedelta(seconds=delta)),'asker':data['nick']}
+        td = datetime.timedelta(seconds=activity)
+        print("Blotsch")
+        print(str(activity)+"\n")
+        print(datetime.datetime.fromtimestamp(activity).strftime("%m/%d/%Y, %H:%M:%S"))
+        replacements = {'user': who, 'time': str(datetime.datetime.fromtimestamp(activity).strftime("%d.%m.%Y, %H:%M:%S")),'asker':data['nick']}
         output = i18n_server.get_text('seen', replacements=replacements,
                                       lang=self.config.lang)
         if not self._is_idented_mod(data, connection):

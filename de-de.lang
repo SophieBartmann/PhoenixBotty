@@ -1,5 +1,5 @@
 seen
-$asker: Ich habe $user zuletzt vor $time gesehen!
+$asker: Ich habe $user zuletzt um $time gesehen!
 wiki_fail
 in Wikipedia finde ich dazu nichts. Magst du einen Artikel dazu schreiben?
 wiki_lang
