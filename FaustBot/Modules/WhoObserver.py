@@ -4,6 +4,7 @@ from FaustBot.Modules.MagicNumberObserverPrototype import MagicNumberObserverPro
 from FaustBot.Modules.ModuleType import ModuleType
 from FaustBot.Modules.PingObserverPrototype import PingObserverPrototype
 from FaustBot.Modules.UserList import UserList
+import time
 
 
 class WhoObserver(MagicNumberObserverPrototype, PingObserverPrototype):
@@ -29,6 +30,8 @@ class WhoObserver(MagicNumberObserverPrototype, PingObserverPrototype):
         if data['number'] == '352':  # RPL_WHOREPLY
             self.input_who(data, connection)
         elif data['number'] == '315':  # RPL_ENDOFWHO
+            #make sure other thread runs to its end.
+            time.sleep(10)
             self.end_who()
 
     def input_who(self, data, connection: Connection):
