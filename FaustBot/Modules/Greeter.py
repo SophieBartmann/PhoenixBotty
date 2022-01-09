@@ -23,5 +23,9 @@ class Greeter(JoinObserverPrototype):
     def update_on_join(self, data, connection: Connection):
         if data['channel'] == connection.details.get_channel():
             if int(time.time()) - self.names[data['nick']] > 28800:
+                if data['nick'].find("Neuling") != -1:
+                    connection.send_back("Herzlich Willkommen bei uns "+data['nick'],data)
+                    self.names[data['nick']] = int(time.time())
+                    return
                 connection.send_back("Hallo " + data['nick'], data)
                 self.names[data['nick']] = int(time.time())
