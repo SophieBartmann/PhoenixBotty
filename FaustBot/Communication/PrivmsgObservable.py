@@ -1,7 +1,8 @@
 import _thread
 
 from FaustBot.Communication.Observable import Observable
-
+from FaustBot import Modules
+from FaustBot.Model.BlockedUsers import BlockProvider
 class PrivmsgObservable(Observable):
     def __init__(self):
         Observable.__init__(self)
@@ -20,8 +21,17 @@ class PrivmsgObservable(Observable):
             return
         if data['nick'] not in self.user_list.userList.keys():
             return
+        blocklist = BlockProvider()
+        if blocklist.is_blocked(data['nick']):
+            self.notify_whitelisted_observers(data, connection)
+            return
         self.notify_observers(data, connection)
 
     def notify_observers(self, data, connection):
         for observer in self._observers:
             _thread.start_new_thread(observer.__class__.update_on_priv_msg, (observer, data, connection))
+
+    def notify_whitelisted_observers(self,data,connection):
+        for observer in self._observers:
+            if observer.__class__.__name__ in ['ActivityObserver']:
+               _thread.start_new_thread(observer.__class__.update_on_priv_msg, (observer, data, connection))
