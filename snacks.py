@@ -3,4 +3,4 @@ snacks=[ 'eine handvoll Salzbrezeln','ein Schälchen Chips','5 M&Ms','ein Päckc
          'ein kleines Stück Kuchen nach Wahl','ein kleines Schälchen Schokoladen Keksi', 'eine Hand voll Trockenfrüchte',
          'ein gesunder Riegel','eine Tüte Luft', '5 Schokobons', 'eine Schale Nachos','einen kinderriegel',
          'eine schwarze Lindor Schokokugel', 'eine Kino Portion süßes Popcorn', 'eine Schale Wasabi Erdnüsse',
-         'eine kleine Schale Pistazien','eine Handvoll Macadamia-Nüsse']
+         'eine kleine Schale Pistazien','eine Handvoll Macadamia-Nüsse','ein Glaß voller Salzstangen']
