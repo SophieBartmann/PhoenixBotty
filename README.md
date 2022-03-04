@@ -58,7 +58,7 @@ Currently we use the [main-branch](https://github.com/SophieBartmann/Faust-Bot/e
 ## Copyright
 ```
     Faust-Bot. A simple, extensible IRC bot.
-    Copyright (C) 2017  Sophie Bartmann, Daniela Tovar
+    Copyright (C) 2017  Sophie Bartmann
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
